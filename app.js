@@ -21,6 +21,8 @@ function agregarAmigo(){
 function sortearAmigo(){
     if(listaAmigos.length==0){
         alert('No existen amigos para sortear');
+    }else if(listaAmigos.length==1){
+        alert('Deben existir mas amigos para sortear');
     }else{
         let amigoSorteado = Math.floor((Math.random()*listaAmigos.length));
         resultado.innerHTML = `<li>El amigo secreto sorteado es: ${listaAmigos[amigoSorteado]}</li>`;
